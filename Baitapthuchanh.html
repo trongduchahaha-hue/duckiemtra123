@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>        
+        let orders = ["Đơn hàng A", "Đơn hàng B", "Đơn hàng C", "Đơn hàng D", "Đơn hàng E"];
+let revenues = [1500, 2800, 1200, -500, 3200];
+
+let hasNegativeOrder = false;
+let allAbove500 = true;
+
+for (let i = 0; i < revenues.length; i++) {
+    if (revenues[i] < 0) {
+        hasNegativeOrder = true;
+    }
+
+    if (revenues[i] <= 500) {
+        allAbove500 = false;
+    }
+}
+
+console.log("Có đơn hàng âm:", hasNegativeOrder);
+console.log("Tất cả trên 500:", allAbove500);
+
+let netProfits = [];
+
+for (let i = 0; i < revenues.length; i++) {
+    let profit = revenues[i] * 0.9;
+    netProfits.push(profit);
+}
+
+console.log("Lợi nhuận ròng:", netProfits);
+    </script>
+</body>
+</html> 
